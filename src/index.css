@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .activeLink {
+        @apply bg-white text-slate-700 rounded-md;
+    }
+}

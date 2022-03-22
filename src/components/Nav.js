@@ -1,17 +1,20 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Nav() {
+
+    const activeClassName = 'activeLink'
     
   return (
-    <header>
+    <header className="bg-slate-800">
         <nav className="xl:w-7/12 w-full m-auto flex flex-row justify-between items-center">
             <div id="logo" className="md:w-28 w-24 px-2">
-                <img src="https://glopha.s3.eu-west-2.amazonaws.com/landing/logo.png" alt="logo"/>
+                <img src="https://glopha.s3.eu-west-2.amazonaws.com/landing/logo-light.png" alt="logo"/>
             </div>
-            <div className="text-xl text-gray-700"><i class="fa-regular fa-badge-check"></i>
+            <div className="text-lg text-white">
                 <ul className="flex flex-row">
-                    <li className="py-10 px-2 hvr-underline-from-center">PRODUCTS</li>
-                    <li className="py-10 px-2 hvr-underline-from-center">CONTACT</li>
+                    <NavLink to='/' className={({ isActive }) => isActive ? activeClassName : undefined}><li className="md:py-1 h-1/2 rounded-md py-1 px-2">PRODUCTS</li></NavLink>
+                    <NavLink to='contact' className={({ isActive }) => isActive ? activeClassName : undefined}><li className="md:py-1 h-1/2 rounded-md py-1 px-2">CONTACT</li></NavLink>
                 </ul>
             </div>
         </nav>
