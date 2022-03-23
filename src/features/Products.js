@@ -4,22 +4,24 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 
+
+
 export default function Products() {
   
   return (
-    <div className='xl:w-7/12 w-full m-auto flex flex-col'>
+    <div className='2xl:w-7/12 xl:w-9/12 w-full m-auto flex flex-col'>
       {/* Hero */}
-      <section className='py-16 px-4 w-full  flex md:flex-row flex-col xl:justify-between gap-4 md:justify-evenly items-center bg-auto bg-no-repeat bg-center' style={{backgroundImage: "url('https://glopha.s3.eu-west-2.amazonaws.com/products/caps.png')"}}>
+      <section className='pt-12 pb-10 px-4 w-full flex md:flex-row flex-col xl:justify-between gap-4 md:justify-evenly items-center bg-auto bg-no-repeat bg-center' style={{backgroundImage: "url('https://glopha.s3.eu-west-2.amazonaws.com/products/caps.png')"}}>
        
         {/* Left div */}
-        <div className='w-5/12 h-[500px] flex flex-col gap-2 md:justify-start md:items-start justify-center items-center bg-white md:bg-transparent'>
+        <div className='md:w-5/12 w-8/12 h-[450px] flex flex-col gap-2 md:justify-start md:items-start justify-center items-center bg-white md:bg-transparent'>
           <h1 className='md:text-left text-center lg:text-6xl text-5xl text-slate-700 font-bold'>Our <span className='text-blue-600 lg:text-8xl text-7xl'>Products</span><span>.</span></h1>
-          <p className='md:text-2xl text-xl md:text-left text-center text-slate-900 font-light'>Below you will find our currently available products</p>
-          <small className='text-left text-slate-600 font-thin'>(We update our stock quite frequently, so make sure to check back regurarly)</small>
+          <p className='md:text-2xl text-xl md:text-left text-center text-slate-900 font-light'>Browse our current catalogue below</p>
+          <small className='md:text-left text-slate-600 font-thin'>(We update our stock quite frequently, so make sure to check back regurarly)</small>
           
           <p className='text-blue-600 text-3xl font-semibold mt-4'>Not sure which one?</p>
           <p className='font-light text-sm'>Give us a shout and we'll help you decide</p>
-          <button class="py-4 w-full md:w-1/2 px-6 bg-blue-600 rounded-lg duration-300 hover:scale-110 text-white">Contact us</button>
+          <button class="md:py-4 py-2 w-7/12 md:w-1/2 px-6 bg-blue-600 rounded-lg duration-300 hover:scale-110 text-white">Contact us</button>
         </div>
 
         {/* Right div */}
@@ -43,6 +45,17 @@ export default function Products() {
                 <p className='text-left text-pink-300 leading-4'>We'll get in touch</p>
               </div>
           </div>
+        </div>
+      </section>
+      <br/>
+
+      {/* Products */}
+      <section className='w-full h-[700px]'>
+        <div className='flex flex-row gap-1 justify-evenly p-2'>
+          
+          {/* Card */}
+          
+
         </div>
       </section>
     </div>

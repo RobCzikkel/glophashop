@@ -18,8 +18,8 @@ export default function Nav() {
     const activeClassName = 'activeLink'
     
   return (
-    <header className="bg-slate-800">
-        <nav className="xl:w-7/12 w-full m-auto flex flex-row justify-between items-center">
+    <header className="bg-slate-800 sticky top-0 z-10">
+        <nav className="2xl:w-7/12 xl:w-9/12 w-full m-auto flex flex-row justify-between items-center">
             {/* Logo */}
             <div id="logo" className="md:w-28 w-24 px-2 hover:scale-105">
                 <a href="http://www.globalpharmacies.co.uk" target="_self"><img src="https://glopha.s3.eu-west-2.amazonaws.com/landing/logo-light.png" alt="logo"/></a>
@@ -40,7 +40,7 @@ export default function Nav() {
             </div>
 
             {/* Burger button */}
-            <div id="burger" className="md:hidden w-[50px] h-[40px] flex flex-col justify-evenly items-start px-2">
+            <div id="burger" className="md:hidden w-[50px] h-[40px] flex flex-col justify-evenly items-end px-2">
                 <div className="h-[2px] w-full bg-white"></div>
                 <div className="h-[2px] w-3/4 bg-white"></div>
                 <div className="h-[2px] w-1/2 bg-white"></div>
@@ -48,7 +48,7 @@ export default function Nav() {
         </nav>
 
         {/* Burger menu */}
-        <div id="burgerMenu" className='absolute top-0 -translate-y-full transtion-all duration-1000 right-0 bg-gray-800 h-screen w-screen text-white'>
+        <div id="burgerMenu" className='absolute top-0 -translate-y-full transtion-all duration-1000 right-0 bg-gray-800 h-screen w-screen text-white z-20'>
             <div id="cross" className="relative float-right w-[40px] h-[40px] px-2 ">
                 <div className="h-[2px] absolute top-8 right-2 w-full rotate-45 bg-white"></div>
                 <div className="h-[2px] absolute top-8 right-2 w-full -rotate-45 bg-white"></div>
