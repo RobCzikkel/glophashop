@@ -3,6 +3,8 @@ import ScreenSearchDesktopOutlinedIcon from '@mui/icons-material/ScreenSearchDes
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
+import ProductCard from '../components/ProductCard';
+import products from '../app/db';
 
 
 
@@ -21,7 +23,7 @@ export default function Products() {
           
           <p className='text-blue-600 text-3xl font-semibold mt-4'>Not sure which one?</p>
           <p className='font-light text-sm'>Give us a shout and we'll help you decide</p>
-          <button class="md:py-4 py-2 w-7/12 md:w-1/2 px-6 bg-blue-600 rounded-lg duration-300 hover:scale-110 text-white">Contact us</button>
+          <button className="md:py-4 py-2 w-7/12 md:w-1/2 px-6 bg-blue-600 rounded-lg duration-300 hover:scale-110 text-white">Contact us</button>
         </div>
 
         {/* Right div */}
@@ -51,10 +53,12 @@ export default function Products() {
 
       {/* Products */}
       <section className='w-full h-[700px]'>
-        <div className='flex flex-row gap-1 justify-evenly p-2'>
+        <div className='w-full flex flex-row flex-wrap gap-3 justify-around p-2'>
           
-          {/* Card */}
-          
+          {Object.keys(products).map((key) => {
+            const product = products[key];
+            return <ProductCard key={key} product={product}/>
+          })}
 
         </div>
       </section>

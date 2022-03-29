@@ -1,8 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function Nav() {
+
+    const wishlist = useSelector((state) => state.wishlist.items);
 
     useEffect(() => {
         const burger = document.querySelector('#burger');
@@ -28,7 +31,7 @@ export default function Nav() {
             <NavLink to="wishlist">
                 <div className="md:w-[30px] w-[25px] h-full relative hover:scale-105">
                     <img className="relative top-1 right-3" src="https://glopha.s3.eu-west-2.amazonaws.com/landing/pill.png" alt="pill"/>
-                    <small className="absolute outline-white top-0 right-0 bg-red-600 rounded-full text-white md:text-[10px] text-[9px] px-2 py-1">2</small>
+                    {wishlist.length > 0 && <small className="absolute outline-white top-0 right-0 bg-red-600 rounded-full text-white md:text-[10px] text-[9px] px-2 py-1">{wishlist.length}</small>}
                 </div>
             </NavLink>
             {/* Links */}

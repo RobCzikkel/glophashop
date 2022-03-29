@@ -1,24 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../features/wishSlice';
 
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+
+// import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 import IconButton from '@mui/material/IconButton';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 
-export default function ProductCard() {
+
+export default function ProductCard({ product, id }) {
+
+  const dispatch = useDispatch();
+
+  const handlePlus = (e) => {
+    e.preventDefault();
+    dispatch(addItem(product));
+  }
 
   return (
-    <div className='w-1/4 overflow-hidden relative'>
-        <Link to=''><div className='relative w-full h-[300px] bg-center bg-no-repeat bg-cover brightness-125 contrast-110 rounded-md' style={{backgroundImage: "url('https://glopha.s3.eu-west-2.amazonaws.com/products/photo1.jpeg')"}}>
+    <div className='lg:w-[250px] w-2/5 relative mb-10 shadow-lg  hover:scale-105 transition-transform duration-250'>
+        <Link to=''><div className='w-full h-[300px] bg-center bg-no-repeat bg-cover brightness-125 contrast-110 rounded-t-md' style={{backgroundImage: `url('https://glopha.s3.eu-west-2.amazonaws.com/products/${product.image}')`}}>
         </div></Link>
-        <div className='flex flex-col w-full h-[100px] justify-start items-start px-1 py-4'>
-            <h4 className='text-xl text-slate-800 font-normal'>Kamagra</h4>
-            <p className='text-sm text-gray-600'>Tablet/<span className=''>100mg</span></p>
-            <p className='mt-3 text-sm text-zinc-500'>For erectile dysfunction</p>
+        <div className='flex flex-col w-full h-fit justify-start items-start px-1 py-4 text-left'>
+            <h4 className='text-lg text-slate-800 font-semibold'>{product.name}</h4>
+            <p className='text-sm text-gray-600'>{product.packaging} - <span className=''>{product.size}</span></p>
+            <p className='mt-3 text-sm text-gray-800'>{product.short}</p>
+            <div className='self-end'>
+               <IconButton onClick={handlePlus}><AddCircleIcon sx={{ color: "black" }}/></IconButton>
+            </div>
         </div>
-        <div className='absolute bottom-12 right-0'>
-            <IconButton><FavoriteBorderIcon sx={{ color: "black" }}/></IconButton>
-        </div>
+        
     </div>
   )
 }
