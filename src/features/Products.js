@@ -1,4 +1,6 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import ScreenSearchDesktopOutlinedIcon from '@mui/icons-material/ScreenSearchDesktopOutlined';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import AttachEmailIcon from '@mui/icons-material/AttachEmail';
@@ -8,7 +10,10 @@ import products from '../app/db';
 
 
 
+
 export default function Products() {
+
+  const itemIDX = useSelector((state) => state.wishlist.items.map(item => item.id))
   
   return (
     <div className='2xl:w-7/12 xl:w-9/12 w-full m-auto flex flex-col'>
@@ -23,7 +28,7 @@ export default function Products() {
           
           <p className='text-blue-600 text-3xl font-semibold mt-4'>Not sure which one?</p>
           <p className='font-light text-sm'>Give us a shout and we'll help you decide</p>
-          <button className="md:py-4 py-2 w-7/12 md:w-1/2 px-6 bg-blue-600 rounded-lg duration-300 hover:scale-110 text-white">Contact us</button>
+          <Link to="contact" className="md:py-4 py-2 w-7/12 md:w-1/2 px-6 bg-blue-600 rounded-lg duration-300 hover:scale-110 text-white"><button>Contact us</button></Link>
         </div>
 
         {/* Right div */}
@@ -57,7 +62,7 @@ export default function Products() {
           
           {Object.keys(products).map((key) => {
             const product = products[key];
-            return <ProductCard key={key} product={product}/>
+            return <ProductCard key={key} id={key} product={product} itemIDX={itemIDX}/>
           })}
 
         </div>

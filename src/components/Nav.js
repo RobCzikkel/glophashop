@@ -24,18 +24,18 @@ export default function Nav() {
     <header className="bg-slate-800 sticky top-0 z-10">
         <nav className="2xl:w-7/12 xl:w-9/12 w-full m-auto flex flex-row justify-between items-center">
             {/* Logo */}
-            <div id="logo" className="md:w-28 w-24 px-2 hover:scale-105">
+            <div id="logo" className="md:w-28 w-24 px-2 hover:scale-105 transition-transform duration-200">
                 <a href="http://www.globalpharmacies.co.uk" target="_self"><img src="https://glopha.s3.eu-west-2.amazonaws.com/landing/logo-light.png" alt="logo"/></a>
             </div>
             {/* Pill */}
             <NavLink to="wishlist">
-                <div className="md:w-[30px] w-[25px] h-full relative hover:scale-105">
+                <div className="md:w-[30px] w-[25px] h-full relative hover:scale-105 transition-transform duration-200">
                     <img className="relative top-1 right-3" src="https://glopha.s3.eu-west-2.amazonaws.com/landing/pill.png" alt="pill"/>
                     {wishlist.length > 0 && <small className="absolute outline-white top-0 right-0 bg-red-600 rounded-full text-white md:text-[10px] text-[9px] px-2 py-1">{wishlist.length}</small>}
                 </div>
             </NavLink>
             {/* Links */}
-            <div className="text-md text-white hidden md:block px-2">
+            <div className="text-md text-white hidden md:block px-2 w-[200px]">
                 <ul className="flex flex-row">
                     <NavLink to='/' className={({ isActive }) => isActive ? activeClassName : undefined}><li className="md:py-1 h-1/2 rounded-md py-1 px-2">PRODUCTS</li></NavLink>
                     <NavLink to='contact' className={({ isActive }) => isActive ? activeClassName : undefined}><li className="md:py-1 h-1/2 rounded-md py-1 px-2">CONTACT</li></NavLink>
