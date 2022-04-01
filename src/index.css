@@ -6,4 +6,12 @@
     .activeLink {
         @apply bg-white text-slate-700 rounded-md;
     }
+
+    .inputFields {
+        @apply rounded-md h-10 mt-2 p-2 text-slate-800 text-sm invalid:text-red-600 required:ring-purple-500 ring-2
+    }
+
+    .labelStyle {
+        @apply uppercase text-white font-semibold text-sm
+    }
 }

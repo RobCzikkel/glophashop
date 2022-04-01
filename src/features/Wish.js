@@ -39,7 +39,6 @@ export default function Wish() {
             </div>}
         </div>
       </section>
-      {/* <JSONPretty id="json-pretty" data={wishList}></JSONPretty> */}
     </div>
 
 
