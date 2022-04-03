@@ -56,8 +56,8 @@ export default function ContactForm() {
     }
   
     return (
-        <div className='rounded-bl-3xl rounded-br-[170px] rounded-tl-[120px] rounded-tr-[50px] shadow-lg shadow-gray-400 bg-blue-600  p-6 w-full sm:w-[500px] h-fit my-8 bg-no-repeat bg-center bg-cover'>
-            <form onSubmit={submitHandler} className='w-full sm:p-6 p-4 flex flex-col gap-4'>
+        <div className='rounded-bl-[50px] rounded-br-[160px] rounded-tl-[100px] rounded-tr-[50px] shadow-lg shadow-gray-600 bg-blue-600 p-6 w-11/12 sm:w-[500px] h-fit my-8 bg-no-repeat bg-center bg-cover'>
+            <form onSubmit={submitHandler} className='w-full sm:p-6 p-2 flex flex-col sm:gap-4 gap-2'>
             <div className='flex flex-row w-full gap-2'>
                 <div className='text-left'>
                 <label className='labelStyle' htmlFor="first">Your first</label>
@@ -99,7 +99,7 @@ export default function ContactForm() {
             </div>
             <div className='flex flex-col items-start w-full'>
                 <label className='labelStyle' htmlFor="message">How can we help? <small className='text-slate-200 font-thin'> {`  ${500 - message.length}`}</small></label>
-                <textarea className='sm:h-48 h-44 rounded-md w-full mt-2 p-2 text-slate-800 text-sm'
+                <textarea className='sm:h-48 h-40 rounded-md w-full my-2 p-2 text-slate-800 text-sm'
                 id="message"
                 placeholder=""
                 name="message"

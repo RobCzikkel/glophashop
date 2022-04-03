@@ -8,11 +8,11 @@
     }
 
     .inputFields {
-        @apply rounded-md h-10 mt-2 p-2 text-slate-800 text-sm invalid:text-red-600 required:ring-purple-500 ring-2
+        @apply rounded-md sm:h-10 h-8 mt-2 md:p-2 p-1 text-slate-800 text-sm invalid:text-red-600 required:ring-purple-500 ring-2
     }
 
     .labelStyle {
-        @apply uppercase text-white font-semibold text-sm
+        @apply uppercase text-white font-semibold sm:text-sm text-xs
     }
 
     .success {
