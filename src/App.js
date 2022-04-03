@@ -4,6 +4,7 @@ import './App.css';
 import Products from './features/Products';
 import Detail from './components/Detail';
 import Contact from './features/Contact';
+// import Footer from './components/Footer';
 import Wish from './features/Wish';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
@@ -20,7 +21,8 @@ function App() {
           <Route path='/contact' element={<Contact />}/>   
           <Route path='/wishlist' element={<Wish />}/> 
           <Route path='*' element={<Contact />}/>
-        </Routes>     
+        </Routes>    
+        {/* <Footer />  */}
       </div>
     </HashRouter>
   );
