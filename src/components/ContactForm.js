@@ -12,7 +12,7 @@ export default function ContactForm() {
     const wait = useSelector((state) => state.global.wait);
     const dispatch = useDispatch();
 
-
+ 
     // Form data
     const [first, setFirst] = useState('');
     const [last, setLast] = useState('');
