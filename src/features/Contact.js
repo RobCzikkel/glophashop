@@ -63,18 +63,18 @@ export default function Contact() {
 
       {!sent && <section className='w-full flex lg:flex-row flex-col justify-around items-center pt-16 px-2 gap-8'>
         {/* Info */}
-        <div className='text-center w-1/4 flex flex-col justify-center items-center'>
+        <div className='text-center md:w-1/4 w-3/4 flex flex-col justify-center items-center'>
           <h5 className='uppercase text-blue-600'>Questions?</h5>
           <h1 className='md:text-6xl text-5xl text-slate-700 font-extrabold my-8 leading-7 text-center'>Get in <br/><span className='text-blue-600 md:text-8xl text-7xl'>touch</span><small>with</small><br/> us</h1>
           <p className='text-xs'>Perhaps you have questions about our products, or the <span className='text-pink-800 font-semibold'>delivery options</span>. Maybe you just need some <span className='text-pink-800 font-semibold'>advice</span>. Whatever the case is, we are here to help</p>
         </div>
 
         {/* Form */}
-        <div className='rounded-bl-3xl rounded-br-[180px] rounded-tl-[120px] rounded-tr-[50px] shadow-lg shadow-gray-400 bg-blue-600  p-6 w-3/4 sm:w-[500px] h-fit my-8 bg-no-repeat bg-center bg-cover'>
+        <div className='rounded-bl-3xl rounded-br-[170px] rounded-tl-[120px] rounded-tr-[50px] shadow-lg shadow-gray-400 bg-blue-600  p-6 w-full sm:w-[500px] h-fit my-8 bg-no-repeat bg-center bg-cover'>
           <form onSubmit={submitHandler} className='w-full p-6 flex flex-col gap-4'>
             <div className='flex flex-row w-full gap-2'>
               <div className='text-left'>
-                <label className='labelStyle' htmlFor="first">Your first...</label>
+                <label className='labelStyle' htmlFor="first">Your first</label>
                 <input className='inputFields w-full'
                 id="first"
                 type="text"
@@ -87,7 +87,7 @@ export default function Contact() {
                 </input>
               </div>
               <div className='text-left'>
-                <label className='labelStyle' htmlFor="last">...and last name</label>
+                <label className='labelStyle' htmlFor="last">and last name</label>
                 <input className='inputFields w-full'
                 id="last"
                 type="text"
@@ -132,9 +132,9 @@ export default function Contact() {
                   })}
                 </div>
               </div>}
-              {!wait ? <input className="w-1/2 self-center p-2 rounded-md text-white bg-fuchsia-700 ring-2 ring-white hover:scale-110 transition-transform duration-200 active:bg-fuchsia-500" 
+              {!wait ? <input className="w-fit self-center p-2 rounded-md text-white bg-fuchsia-700 ring-2 ring-white hover:scale-110 transition-transform duration-200 active:bg-fuchsia-500" 
               type="submit" value="Send email"></input>
-              : <button className="w-1/2 self-center p-1 rounded-md text-white text-3xl bg-fuchsia-700 ring-2 ring-white hover:scale-110 transition-transform duration-200 active:bg-fuchsia-500" 
+              : <button className="w-fit self-center p-1 rounded-md text-white text-3xl bg-fuchsia-700 ring-2 ring-white hover:scale-110 transition-transform duration-200 active:bg-fuchsia-500" 
               type="submit" value="Send email"><RotateRightIcon fontSize="inherit" className='animate-spin'/></button>}
           </form>
         </div>

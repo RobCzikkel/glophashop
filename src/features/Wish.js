@@ -22,7 +22,7 @@ export default function Wish() {
     <div className='2xl:w-7/12 xl:w-9/12 w-full m-auto'>
       {/* Main */}
       <section className='w-full flex flex-col pt-16 px-2'>
-        <h3 className='lg:text-left text-center lg:text-6xl text-5xl text-slate-700 font-bold'>Currently <br/>in <span className='text-blue-600 lg:text-8xl text-7xl'>your</span>wishlist:</h3>
+        <h3 className='lg:text-left text-center lg:text-6xl text-5xl text-slate-700 font-bold '>Currently <br/>in <span className='text-blue-600 lg:text-8xl text-7xl'>your</span><span className='text-2xl'>wishlist:</span></h3>
         
         {/* 2 Columns */}
         <div className='w-full h-fit pt-16 flex lg:flex-row flex-col lg:justify-between items-center px-2'>

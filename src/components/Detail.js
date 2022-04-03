@@ -18,7 +18,7 @@ export default function Detail() {
   }
 
   return (
-    <div className='2xl:w-7/12 lg:w-10/12 w-full m-auto lg:pt-32 pt-28'>
+    <div className='2xl:w-7/12 lg:w-10/12 w-full m-auto lg:pt-32 pt-20'>
       {/* Breadcrumbs */}
       <div className='md:w-full w-11/12 mb-4 m-auto flex flex-row flex-wrap justify-start items-center p-4 md:text-base text-sm gap-2 uppercase text-cyan-500'>
         <Link to="/" className='hover:text-slate-700'>PRODUCTS</Link>
