@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { setSent } from '../features/globalSlice';
+import { useSelector } from 'react-redux';
+
 
 export default function Confirmation({ children }) {
 
-    const dispatch = useDispatch();
 
     const AWSResp = useSelector((state) => state.global.AWSResp);
     const error = useSelector((state) => state.global.error);
