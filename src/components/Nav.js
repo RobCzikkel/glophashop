@@ -53,17 +53,16 @@ export default function Nav() {
         </nav>
 
         {/* Burger menu */}
-        <div id="burgerMenu" className='absolute top-0 -translate-y-full -translate-x-full transition-all duration-1000 right-0 bg-gray-800 h-screen w-screen text-white z-20'>
-            <div id="cross" className="relative float-right w-[40px] h-[40px] px-2 ">
-                <div className="h-[2px] absolute top-8 right-2 w-full rotate-45 bg-white"></div>
-                <div className="h-[2px] absolute top-8 right-2 w-full -rotate-45 bg-white"></div>
+        <div id="burgerMenu" class='absolute z-10 top-0 -translate-y-full -translate-x-full transition-all duration-1000 right-0 bg-gray-800 h-screen w-screen text-white'>
+            <div id="cross" class="relative float-right w-[40px] h-[40px] px-2 ">
+                <div class="h-[2px] absolute top-8 right-2 w-full rotate-45 bg-white"></div>
+                <div class="h-[2px] absolute top-8 right-2 w-full -rotate-45 bg-white"></div>
             </div>
-            <div className='h-full w-1/2 m-auto flex flex-col items-center justify-center'>
-                <img className="w-1/2 mb-28 justify-self-start" src="https://glopha.s3.eu-west-2.amazonaws.com/landing/logo-light.png" alt="logo"/>
-                <ul className="text-2xl flex flex-col">
-                    <a href="https://www.globalpharmacies.co.uk" target="_self"><li className="h-1/2  rounded-md py-2 px-2">HOME</li></a>
-                    <NavLink to='/'><li className="h-1/2 rounded-md py-2 px-2">PRODUCTS</li></NavLink>
-                    <NavLink to='contact'><li className="h-1/2 rounded-md py-2 px-2">CONTACT</li></NavLink>
+            <div class='h-3/4 w-1/2 m-auto flex flex-col items-center justify-center p-4'>
+                <img class="w-10/12 mb-18 justify-self-start" src="https://glopha.s3.eu-west-2.amazonaws.com/landing/logo-light.png" alt="logo"/>
+                <ul class="text-xl flex flex-col">
+                    <a href="https://shop.globalpharmacies.co.uk/" target="_self"><li class=" py-2">PRODUCTS</li></a>
+                    <a href="https://shop.globalpharmacies.co.uk/#/contact" target="_self"><li class=" py-2">CONTACT</li></a>
                 </ul>
             </div>
         </div>
