@@ -1,15 +1,34 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import WishItem from '../components/WishItem';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Modal from '@mui/material/Modal';
+import ContactForm from '../components/ContactForm';
+import Confirmation from '../components/Confirmation';
+import { setSent } from './globalSlice';
 
 export default function Wish() {
 
   const wishList = useSelector((state) => state.wishlist.items);
+  const sent = useSelector((state) => state.global.sent);
   const [open, setOpen] = useState(false)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    let delay
+    if(sent) {
+      delay = setTimeout(() => {
+        dispatch(setSent(false))
+        setOpen(false)
+      }, 2000);
+    }
+
+    return () => {
+      clearTimeout(delay)
+    }
+  }, [sent, dispatch])
 
   const handleOpen = () => {
     setOpen(true)
@@ -22,7 +41,7 @@ export default function Wish() {
     <div className='2xl:w-7/12 xl:w-9/12 w-full m-auto'>
       {/* Main */}
       <section className='w-full flex flex-col pt-16 px-2'>
-        <h3 className='lg:text-left text-center lg:text-6xl text-5xl text-slate-700 font-bold '>Currently <br/>in <span className='text-blue-600 lg:text-8xl text-7xl'>your</span><span className='text-2xl'>wishlist:</span></h3>
+        <h3 className='lg:text-left text-center lg:text-6xl text-5xl text-slate-700 font-bold'><span className='font-normal'>Currently</span> in <br/><span className='text-blue-600 lg:text-8xl text-7xl'>your</span><span className='text-4xl font-normal block md:inline'>wishlist:</span></h3>
         
         {/* 2 Columns */}
         <div className='w-full h-fit pt-16 flex lg:flex-row flex-col lg:justify-between items-center px-2'>
@@ -52,8 +71,11 @@ export default function Wish() {
       </section>
       <Modal
         open={open}
-        onClose={handleClose}>
-          <div>O he</div>
+        onClose={handleClose}
+        sx={{ overflow: "auto", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+          <div className='pt-24 xl:w-4/12 lg:w-6/12 md:w-8/12 w-11/12 m-auto flex flex-row justify-center h-fit'>
+            {!sent ? <ContactForm /> : <Confirmation />}
+          </div>
       </Modal>
     </div>
 

@@ -16,10 +16,10 @@
     }
 
     .success {
-        @apply bg-teal-600 w-2/4 h-fit p-4 rounded-3xl text-white
+        @apply bg-teal-600 md:w-2/4 w-11/12 h-fit p-4 rounded-3xl text-white
     }
 
     .failure {
-        @apply bg-rose-700 w-2/4 h-fit p-4 rounded-3xl text-white
+        @apply bg-rose-700 md:w-2/4 w-11/12 h-fit p-4 rounded-3xl text-white
     }
 }
