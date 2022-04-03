@@ -11,10 +11,12 @@ export default function Nav() {
         const burger = document.querySelector('#burger');
         const menu = document.querySelector('#burgerMenu');
         burger.addEventListener('click', () => {
-            menu.classList.remove('-translate-y-full')
+            menu.classList.remove('-translate-y-full');
+            menu.classList.remove('-translate-x-full');
       })
         menu.addEventListener('click', () => {
-            menu.classList.add('-translate-y-full')
+            menu.classList.add('-translate-y-full');
+            menu.classList.add('-translate-x-full')
         })
     }, [])
     
@@ -51,7 +53,7 @@ export default function Nav() {
         </nav>
 
         {/* Burger menu */}
-        <div id="burgerMenu" className='absolute top-0 -translate-y-full transtion-all duration-1000 right-0 bg-gray-800 h-screen w-screen text-white z-20'>
+        <div id="burgerMenu" className='absolute top-0 -translate-y-full -translate-x-full transition-all duration-1000 right-0 bg-gray-800 h-screen w-screen text-white z-20'>
             <div id="cross" className="relative float-right w-[40px] h-[40px] px-2 ">
                 <div className="h-[2px] absolute top-8 right-2 w-full rotate-45 bg-white"></div>
                 <div className="h-[2px] absolute top-8 right-2 w-full -rotate-45 bg-white"></div>

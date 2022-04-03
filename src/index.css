@@ -14,4 +14,12 @@
     .labelStyle {
         @apply uppercase text-white font-semibold text-sm
     }
+
+    .success {
+        @apply bg-teal-600 w-2/4 h-fit p-4 rounded-3xl text-white
+    }
+
+    .failure {
+        @apply bg-rose-700 w-2/4 h-fit p-4 rounded-3xl text-white
+    }
 }

@@ -57,8 +57,8 @@ export default function Products() {
       <br/>
 
       {/* Products */}
-      <section className='w-full h-[700px]'>
-        <div className='w-full flex flex-row flex-wrap gap-3 justify-around p-2'>
+      <section className='w-full h-fit'>
+        <div className='w-full flex flex-row flex-wrap gap-1 sm:gap-3 justify-around p-2'>
           
           {Object.keys(products).map((key) => {
             const product = products[key];
