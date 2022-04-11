@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Modal from '@mui/material/Modal';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 import ContactForm from '../components/ContactForm';
 import Confirmation from '../components/Confirmation';
 import { setSent } from './globalSlice';
@@ -57,6 +58,10 @@ export default function Wish() {
             {wishList.map(item => {
               return <WishItem key={item.name} item={item}/>
             })}
+            {/* Add more product */}
+            {wishList.length !== 0 && <div className='flex flex-row gap-3 self-center items-center'>
+              <p className='text-gray-500 font-semibold'>Add more products</p><Link to="/" className='hover:opacity-80'><AddCircleIcon sx={{ color: "gray" }}/></Link>
+            </div>}
           </div>
           {/* Email box */}
             {wishList.length !== 0 && <div className='lg:w-4/12 w-full h-96 flex flex-col items-center justify-start gap-8'>
@@ -73,7 +78,7 @@ export default function Wish() {
         open={open}
         onClose={handleClose}
         sx={{ overflow: "auto", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-          <div className='pt-24 xl:w-4/12 lg:w-6/12 md:w-8/12 w-11/12 m-auto flex flex-row justify-center h-fit'>
+          <div className='pt-24 xl:w-4/12 lg:w-6/12 md:w-8/12 w-11/12 m-auto flex flex-row justify-center h-fit outline-0'>
             {!sent ? <ContactForm /> : <Confirmation />}
           </div>
       </Modal>

@@ -61,8 +61,8 @@ export default function Nav() {
             <div className='h-3/4 w-1/2 m-auto flex flex-col items-center justify-center p-4'>
                 <img className="w-10/12 mb-18 justify-self-start" src="https://glopha.s3.eu-west-2.amazonaws.com/landing/logo-light.png" alt="logo"/>
                 <ul className="text-xl flex flex-col">
-                    <a href="https://shop.globalpharmacies.co.uk/" target="_self"><li className=" py-2">PRODUCTS</li></a>
-                    <a href="https://shop.globalpharmacies.co.uk/#/contact" target="_self"><li className=" py-2">CONTACT</li></a>
+                    <NavLink to="/" className=" py-2">PRODUCTS</NavLink>
+                    <NavLink to="contact" className=" py-2">CONTACT</NavLink>
                 </ul>
             </div>
         </div>
